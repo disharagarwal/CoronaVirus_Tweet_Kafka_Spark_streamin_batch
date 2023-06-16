@@ -1,21 +1,20 @@
-# twittersentimentanalysis
+# twittercornovirustweetsegregation
 
-This project is a good starting point for those who have little or no experience with Kafka & Apache Spark Streaming.
+This project is a good starting point for those who have little or no experience with Kafka & Apache Spark Streaming and batch processing.
 
-![image](https://user-images.githubusercontent.com/57892314/153753329-a49ef16f-37c5-43fd-8d24-312ae4c59803.png)
 
-Input data: Live tweets with a keyword
-Main model: Data preprocessing and apply sentiment analysis on the tweets
-Output: Text with all the tweets and their sentiment analysis scores (polarity and subjectivity)
+Input data:CSV file
+Main model: Divide the tweets based in topics and store them in Mysql Database
+Output: Text with all the tweets and also stored in Mysql databse.
 
-We use Python version 3.7.9 and Spark version 3.2.1 and Kafka 3.1.0.
+
 
 ## Part 1: Ingest Data using Kafka 
 
-This part is about sending tweets from Twitter API. To do this, follow the instructions in my last article about the ingestion of Data using Kafka. Here is the [link](https://lorenagongang.com/getting-started-with-kafka-twitter-streaming-with-apache-kafka).
+Can you data in Real Time using API or also can use CSV file. The streamed data should be in CSV format
 
 
-## Part 2: Tweet preprocessing and sentiment analysis
-In this part, we receive tweets from Kafka and preprocess them with the pyspark library which is python's API for spark. We then apply sentiment analysis using textblob; A python's library for processing textual Data. I wrote an article on sentiment analysis [sentiment analysis ](https://lorenagongang.com/sentiment-analysis-concept-bitcoin-sentiment-analysis-using-python-and-twitter). I used the same code in this project.
+## Part 2: Tweet preprocessing and Segregation 
+In this part, we receive tweets from Kafka and preprocess them with the pyspark library which is python's API for spark. We then divide them into different topics.
 
-After sentiment analysis, we write the sentiment analysis scores in the console. We have also the possibility to store in a parquet file, which is a data storage format.
+After we send them to consumer file and then it is stored in Databse and also the streaming is shown in console.
