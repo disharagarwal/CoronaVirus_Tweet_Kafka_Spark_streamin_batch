@@ -11,7 +11,7 @@ Output: Text with all the tweets and also stored in Mysql databse.
 
 ## Part 1: Ingest Data using Kafka 
 
-Can you data in Real Time using API or also can use CSV file. The streamed data should be in CSV format
+Can use data in Real Time using API CSV file. The streamed data should be in CSV format
 
 
 ## Part 2: Tweet preprocessing and Segregation 
